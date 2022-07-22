@@ -147,10 +147,17 @@ namespace Final
             Console.CursorVisible = true;
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
+again:
             Console.Clear();
-
-            Console.Write("Nhap n: ");
+            Console.Write("ban muong nhap bao nhieu so: ");
             int n = int.Parse(Console.ReadLine());
+
+            if (n < 5 || n > 10)
+            {
+                Console.WriteLine("Xin loi, ban chi duoc nhap tu 5 den 10 thoi");
+                Thread.Sleep(2000);
+                goto again;
+            }
            
             m1.Clear();
             for (int i = 0; i < n; i++)
